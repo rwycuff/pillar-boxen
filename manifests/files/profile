@@ -1,0 +1,26 @@
+# default profile
+
+# boxen environment
+source /opt/boxen/env.sh
+
+# android home
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+
+# aliases
+alias ll="ls -ltra"
+alias repo="cd /opt/boxen/repo"
+
+set -o vi
+
+# GIT aliases
+alias pull='git pull'
+alias push='git push'
+alias rh='git reset --hard'
+alias ads='git checkout ads'
+alias st='git status'
+alias log="clear; git log -20 --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative"
+alias log2="clear; git log -20 --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s' --graph --date=relative --abbrev-commit"
+alias br='git branch'
+alias ac='git add .; git commit -a '
+alias mrg='git merge --no-ff'
